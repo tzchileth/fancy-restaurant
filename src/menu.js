@@ -61,7 +61,7 @@ const createMenu = () => {
     price.classList.add("price");
     price.textContent = `${pricesCalories[i][0]}`;
     menuDetails.classList.add("menu-details");
-    const menuDetailsText = document.createTextNode(`${pricesCalories[0][1]}`);
+    const menuDetailsText = document.createTextNode(`${pricesCalories[i][1]}`);
     menuDetails.append(price, menuDetailsText);
 
     //   priceNCalorie -- step 3
@@ -75,7 +75,7 @@ const createMenu = () => {
     // add img -- step 5
     cardImage.classList.add("card-image");
     const myMenu = new Image();
-    myMenu.src = `${images[0]}`;
+    myMenu.src = `${images[i]}`;
     cardImage.appendChild(myMenu);
     // add nodes to card -- step 6
     card.classList.add("card");
