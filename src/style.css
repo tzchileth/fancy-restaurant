@@ -9,9 +9,9 @@ body{
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
     align-items: center;
     gap: 20px;
 }
@@ -32,11 +32,33 @@ header > nav {
 
 .container >#content {
     display: grid;
-    min-height: 90vh;
-    width: 80%;
+    min-height: 100vh;
+    /* width: 100%; */
     color: rgb(255, 255, 255);
     font-weight: bold;
-    grid-auto-rows: 80px;
+}
+
+.container >#content>.homeContainer {
+    display: grid;
+    color: white;
+    grid-template-columns: minmax(500px, 700px);
+    grid-auto-rows: 60px;
+    background: rgba(219, 219, 200, 0.72);
+    border-radius: 10px;
+    padding: 10px;
+    line-height: 2.5em;
+}
+
+h1 {
+    color: rgb(109, 18, 18);
+}
+
+p {
+    color: rgb(42, 29, 102);
+}
+
+p:hover {
+    color: rgb(0, 0, 0);
 }
 
 button {
@@ -65,11 +87,75 @@ button:hover:first-child {
     color: beige;
 }
 
+.formButton {
+    background: #030303;
+    margin-bottom: 5px;
+    color: rgb(255, 255, 255);
+}
+
+.formButton:hover {
+    background: #7a1d1d;
+}
+
 .footer {   
     color: rgb(255, 255, 255);
     font-weight: bold;
+    
 }
 
 h1:hover {
-    color: #7a0f3b;
+    color: #141e57;
 }
+
+.formHeader {
+    font-size: 45px;
+}
+
+.card-container {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 320px));
+    grid-auto-rows: 300px;
+}
+
+.card-container>.card {
+    display: grid;
+    height: 270px;
+    background-color: rgb(243, 228, 228);
+    border-radius: 8px;
+    border-left: 5px solid goldenrod;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-button {
+    background: rgb(110, 29, 29);
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+.menu-details {
+    color: #4b4945;
+}
+
+.title, .menu-details>.price {
+    color: black;
+}
+
+.card-container >.card>.card-image {
+    display: grid;
+    justify-items: center;
+ }
+
+.card-container >.card>.card-image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.card-container >.card> .menu-button {
+    justify-self: end;
+}
+
