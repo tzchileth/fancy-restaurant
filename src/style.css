@@ -62,14 +62,15 @@ p:hover {
 }
 
 button {
-    background: #9b8e8e;
-    color: rgb(50, 23, 151);
+    background: rgba(172, 164, 164, 0.32);
+    color: rgb(255, 255, 255);
     font-family: Roboto, sans-serif;
     border: none;
     border-radius: 20px;
     padding: 5px 20px;
     font-size: 15px;
     margin: 0;
+    font-weight: bold;
 }
 
 button:hover:nth-last-child(1) {
