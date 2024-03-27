@@ -78,12 +78,27 @@ button:hover:nth-last-child(1) {
     color: beige;
 }
 
+button:focus:nth-last-child(1) {
+    background: #7a1d1d;
+    color: beige;
+}
+
 button:hover:nth-last-child(2) {
     background: #123d8b;
     color: beige;
 }
 
+button:focus:nth-last-child(2) {
+    background: #123d8b;
+    color: beige;
+}
+
 button:hover:first-child {
+    background: #8b6112;
+    color: beige;
+}
+
+button:focus:first-child {
     background: #8b6112;
     color: beige;
 }
