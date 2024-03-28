@@ -1,7 +1,9 @@
 const displayContacts = () => {
+  const container = document.querySelector(".container");
   const content = document.querySelector("#content");
   const btn = document.createElement("button");
   const cardContainer = document.createElement("div");
+  const formButton = document.querySelector(".formButton");
 
   const udaleDiv = document.createElement("div");
   const ravenDiv = document.createElement("div");
@@ -14,13 +16,15 @@ const displayContacts = () => {
     ["Chile Bushcat", "Taster", "888-888-992", "chilly@bushrestaurant.com"],
   ];
 
-  btn.textContent = `Contact Us`;
-  btn.classList.add("formHeader");
-  btn.classList.add("formButton");
+  if (!formButton) {
+    btn.textContent = `Contact Us`;
+    btn.classList.add("formHeader");
+    btn.classList.add("formButton");
+    container.insertBefore(btn, content);
+  }
 
-  content.style.width = "";
+  // content.style.width = "80%";
 
-  content.append(btn);
   cardContainer.classList.add("card-container");
 
   for (let i = 0; i < sections.length; i++) {
@@ -43,8 +47,8 @@ const displayContacts = () => {
     cardContainer.appendChild(sections.at(i));
   }
 
-  content.append(cardContainer);
-  return content;
+  content.style["min-height"] = "150vh";
+  return content.append(cardContainer);
 };
 
 export { displayContacts };

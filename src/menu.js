@@ -18,8 +18,16 @@ import Menu16 from "./img/menu16.webp";
 import { menuTitles, pricesAndCalories } from "./contents";
 
 const createMenu = () => {
+  const container = document.querySelector(".container");
+
   const content = document.querySelector("#content");
   const cardContainer = document.createElement("div");
+  const formButton = document.querySelector(".formButton");
+
+  if (formButton) {
+    container.removeChild(formButton);
+  }
+
   content.style.width = "100%";
 
   const images = [
