@@ -1,7 +1,7 @@
 const displayContacts = () => {
   const content = document.querySelector("#content");
-  const contactHeading = document.createElement("h1");
   const btn = document.createElement("button");
+  const cardContainer = document.createElement("div");
 
   const udaleDiv = document.createElement("div");
   const ravenDiv = document.createElement("div");
@@ -21,6 +21,7 @@ const displayContacts = () => {
   content.style.width = "";
 
   content.append(btn);
+  cardContainer.classList.add("card-container");
 
   for (let i = 0; i < sections.length; i++) {
     const header = document.createElement("h1");
@@ -38,11 +39,11 @@ const displayContacts = () => {
     sections.at(i).append(phone);
     sections.at(i).append(email);
 
-    sections.at(i).classList.add("card");
-
-    content.append(sections.at(i));
+    sections.at(i).classList.add("contact-card");
+    cardContainer.appendChild(sections.at(i));
   }
 
+  content.append(cardContainer);
   return content;
 };
 
